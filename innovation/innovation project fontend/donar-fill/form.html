@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donor Food Form</title>
+  <link rel="stylesheet" href="form.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <h2>Donar</h2>
+        <nav>
+            <ul>
+                <a href="#" style="text-decoration: none; color: inherit;"><li><i class="fas fa-home"></i> Dashboard</li></a>
+                <a href="#" style="text-decoration: none; color: inherit;"><li><i class="fas fa-list"></i> List of Food Details</li></a>
+                <a href="#" style="text-decoration: none; color: inherit;"><li><i class="fas fa-envelope-open-text"></i> Requests</li></a>
+                <div class="menu-item dropdown">
+                  <a href="#" class="dropdown-toggle"><i class="fas fa-search"></i> Search</a>
+                  <div class="dropdown-menu search-box">
+                      <input type="text" placeholder="Search here...">
+                      <button type="submit">Go</button>
+                  </div>
+              </div>
+            </ul>
+        </nav>
+        <div class="sidebar-img">
+            <img src="/photos/donar.png" alt="Food Image">
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Navbar -->
+        <header class="navbar">
+            <ul>
+                <a href="#" style="text-decoration: none; color: inherit;"><li>About Us</li></a>
+                <a href="#" style="text-decoration: none; color: inherit;"><li>Contact Us</li></a>
+                <a href="#" style="text-decoration: none; color: inherit;"><li>Donar</li></a>
+                <a href="#" style="text-decoration: none; color: inherit;"><li>Reciver</li></a>
+                <a href="#" style="text-decoration: none; color: inherit;"><li>FQA</li></a>
+                <a href="#" style="text-decoration: none; color: inherit;"><li><button class="search-btn">Search</button></li></a>
+            </ul>
+        </header>
+
+        <!-- Mail Icon Below Navbar -->
+        <div class="mail-icon">
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+
+        <!-- Form Section -->
+        <section class="form-container">
+          <h2>List Your Food Details</h2>
+          <form id="foodForm">
+            <div class="field" id="food-items">
+              <label>Food Item</label>
+              <input type="text" placeholder="Item Name" name="item[]"/>
+            </div>
+            <button type="button" onclick="addItem()">Add More</button>
+            
+            <label>Description</label>
+            <textarea name="description"></textarea>
+
+            <label>Pick Up Date</label>
+            <input type="date" name="date"/>
+
+            <label>Pickup Address</label>
+            <input type="text" name="address"/>
+
+            <label>Choose State</label>
+            <input type="text" name="state"/>
+
+            <label>Choose City</label>
+            <input type="text" name="city"/>
+
+            <label>Personal Email</label>
+            <input type="email" name="email"/>
+
+            <label>Mobile Number</label>
+            <input type="tel" name="mobile"/>
+
+            <label>Pictures</label>
+            <input type="file" id="fileInput" accept="image/*" onchange="previewImage(event)"/>
+            <img id="imagePreview" alt="Image Preview"/>
+
+            <button type="submit" onclick="submitForm(event)">Submit</button>
+          </form>
+          <div id="successMessage" class="message">Food added successfully!</div>
+        </section>
+    </main>
+  </div> <!-- Closing container div -->
+
+  <!-- Footer (now outside the container) -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-links">
+        <div>
+          <h4>Company</h4>
+          <p><a href="#">About Us</a></p>
+          <p><a href="#">Contact Us</a></p>
+          <p><a href="#">FAQ</a></p>
+        </div>
+        <div>
+          <h4>For Suppliers</h4>
+          <p><a href="#">How It Works</a></p>
+          <p><a href="#">Supplier Login/Registration</a></p>
+        </div>
+        <div>
+          <h4>For Receivers</h4>
+          <p><a href="#">How It Works</a></p>
+          <p><a href="/Register.html">Receiver Login/Registration</a></p>
+        </div>
+        <div>
+          <h4>Subscribe to our Newsletter</h4>
+          <p>Stay up-to-date with food availability</p>
+          <input type="email" placeholder="Enter your Email">
+          <button class="subscribe-btn">Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 FoodLinker. All rights reserved</p>
+        <div>
+          <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function addItem() {
+      const foodItemsDiv = document.getElementById('food-items');
+      const newInput = document.createElement('input');
+      newInput.type = 'text';
+      newInput.name = 'item[]';
+      newInput.placeholder = 'Item Name';
+      newInput.style.marginTop = '10px';
+      foodItemsDiv.appendChild(newInput);
+    }
+
+    function previewImage(event) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        document.getElementById('imagePreview').src = reader.result;
+      };
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('successMessage').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>

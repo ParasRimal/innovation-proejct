@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doner Dashboard</title>
+    <link rel="stylesheet" href="donar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                DONER
+            </div>
+            <div class="menu-item">
+              <a href="#" class="dropdown-toggle"><i class="fas fa-home"></i> Dashboard</a>
+          </div>
+
+          <div class="menu-item dropdown">
+              <a href="#" class="dropdown-toggle"><i class="fas fa-list"></i> List of Food Details</a>
+              <div class="dropdown-menu">
+                  <a href="../donar-fill/form.html">Add Food</a>
+                  <a href="../requested/requested.html">Manage Food</a>
+              </div>
+          </div>
+
+          <div class="menu-item dropdown">
+              <a href="#" class="dropdown-toggle"><i class="fas fa-hand-holding-heart"></i> Requests</a>
+              <div class="dropdown-menu">
+                  <a href="../requested/requested.html">New</a>
+                  <a href="/Not-complete-yet/Not-picked-yet.html">Picked/Complete</a>  
+                  <!-- if reciver picked food (i.e if food receive complete)then use this link /pick-complete/completed.html -->
+                  <a href="/Rejected/rejected.html">Rejected</a>
+                  <a href="/requested/requested.html">All</a>
+              </div>
+          </div>
+          <div class="menu-item dropdown">
+            <a href="#" class="dropdown-toggle"><i class="fas fa-search"></i> Search</a>
+            <div class="dropdown-menu search-box">
+                <input type="text" placeholder="Search here...">
+                <button type="submit">Go</button>
+            </div>
+        </div>
+        
+            <div class="sidebar-image">
+                <img src="/photos/donar.png" alt="Food Image">
+            </div>
+        </aside>
+        <main class="main-content">
+          <!-- Top Navbar -->
+          <header class="navbar">
+              <ul>
+                  <a href="./about" style="text-decoration: none; color: inherit;"><li>About Us</li></a>
+                  <a href="#" style="text-decoration: none; color: inherit;"><li>Contact Us</li></a>
+                  <a href="#" style="text-decoration: none; color: inherit;"><li>Donar</li></a>
+                  <a href="../reciver view port/" style="text-decoration: none; color: inherit;"><li>Reciver</li></a>
+                  <a href="" style="text-decoration: none; color: inherit;"><li><button class="search-btn">Search</button></li></a>
+              </ul>
+          </header>
+    
+          <!-- Mail Icon Below Navbar -->
+          <div class="mail-icon">
+              <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-cards">
+                <div class="card red">
+                    <i class="fas fa-utensils"></i>
+                    <p><a href="/donar-food-details/food-details.html" style="text-decoration: none; color: inherit;">Total Listed Food</p>
+                    <span>0</span></a>
+                </div>
+                <div class="card olive">
+                    <i class="fas fa-check-circle"></i>
+                    <p><a href="/Complete/complete.html" style="text-decoration: none; color: inherit;">Requested Completed / Food Take Away</p>
+                    <span>0</span></a>
+                </div>
+                <div class="card blue">
+                    <i class="fas fa-question-circle"></i>
+                    <a href="/requested/requested.html" style="text-decoration: none; color: inherit;"><p>All Requests</p>
+                    <span>0</span></a>
+                </div>
+                <div class="card green">
+                    <i class="fas fa-times-circle"></i>
+                    <a href="/Rejected/rejected.html" style="text-decoration: none; color: inherit;"><p>Rejected Requests</p>
+                    <span>0</span></a>
+                </div>
+            </div>
+                <!-- Main Content -->
+
+
+            <section class="description">
+                <h2>Effortlessly List Your Food Items on FoodLinker</h2>
+                <p>FoodLinker simplifies the process of listing your available food items. Input essential details such as food name, quantity, location, and expiry dates with ease. Our intuitive interface ensures a seamless experience, allowing you to quickly connect with potential receivers and reduce food waste.</p>
+                <ul>
+                    <li>Easy Input: Quickly add food details.</li>
+                    <li>Expiry Prediction: Leverage ChatGPT for date estimates.</li>
+                    <li>Real-Time Updates: Keep your listings current.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+  <footer>
+    <div class="footer-links">
+      <div>
+        <h4>Company</h4>
+        <p><a href="#">About Us</a></p>
+        <p><a href="#">Contact Us</a></p>
+        <p><a href="#">FAQ</a></p>
+      </div>
+      <div>
+        <h4>For Suppliers</h4>
+        <p><a href="#">How It Works</a></p>
+        <p><a href="#">Supplier Login/Registration</a></p>
+      </div>
+      <div>
+        <h4>For Receivers</h4>
+        <p><a href="#">How It Works</a></p>
+        <p><a href="#">Receiver Login/Registration</a></p>
+      </div>
+      <div>
+        <h4>Subscribe to our Newsletter</h4>
+        <p>Stay up-to-date with food availability</p>
+        <input type="email" placeholder="Enter your Email">
+        <button class="subscribe-btn">Subscribe</button>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 FoodLinker. All rights reserved</p>
+      <div>
+        <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+</body>
+</html>
