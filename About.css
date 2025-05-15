@@ -1,0 +1,268 @@
+body{
+  margin: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+  font-family: 'Nunito Sans';
+ }
+
+.navbar{
+  position: relative;
+  background-color: #B5BEDA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  height: 70px;
+ }
+
+ .logo {
+  display: flex;
+  align-items: center; 
+  height: 100%;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block; 
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  gap: 30px; 
+ }
+
+.nav-link a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+  }
+
+.search {
+  padding: 8px 16px;
+  background-color: #a8dadc;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+ }
+
+.search:hover {
+  background-color: #94c9cb;
+ }
+
+.commitment {
+  width: 94%;
+  padding: 60px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  gap: 40px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #1c1c1c;
+}
+
+.paragraph {
+  display: flex;
+  align-items: center;
+}
+
+.paragraph p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
+
+.image-container {
+  grid-column: span 2;
+  margin-top: 40px 0px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+.image-container {
+  grid-column: span 2; /* Makes the image full width */
+  margin-top: 40px;
+  display: flex;
+  width: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.team {
+  text-align: center;
+  padding: 40px;
+  font-family: 'Nunito Sans';
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.team p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* space between members */
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.team-members div {
+  text-align: center;
+}
+
+.team-members img {
+  width: 260px;
+  height: 320px;
+  border-radius: 1%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-members p {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.join-section {
+  text-align: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.join-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.join-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.learn-more-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #87CEEB; /* Sky blue */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #00bfff;
+}
+
+
+  footer {
+    background-color: #d3d6dd;
+    padding: 20px 100px;
+    gap: 5px;
+    font-size: 14px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .footer-links div {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .footer-links input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #999;
+  }
+  
+  .subscribe-btn {
+    background-color: #00f0c0;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .footer-bottom {
+    border-top: 1px solid #aaa;
+    margin-top: 40px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-bottom p,
+  .footer-bottom a {
+    color: #333;
+  }
+  
+  .social-icons a {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #333;  
+    height: 20px;
+    width: 20px;
+  }
+  
